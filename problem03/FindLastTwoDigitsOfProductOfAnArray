@@ -3,7 +3,7 @@
 public class FindLastTwoDigitsOfProductOfAnArray {
 	private static int solve(int n, int[] arr) {
 		if(n==0) {
-			return;
+			return 0;
 		}
 
 		int lastTwoDigits = 1;

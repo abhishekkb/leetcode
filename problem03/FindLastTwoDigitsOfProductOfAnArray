@@ -1,0 +1,25 @@
+
+
+public class FindLastTwoDigitsOfProductOfAnArray {
+	private static void solve(int n, int[] arr) {
+		if(n==0) {
+			return;
+		}
+
+		int lastTwoDigits = 1;
+		for(int a: arr) {
+			int d1 = lastTwoDigits * ((a/1)%10); // lastTwoDigits * ones
+			int d10 =  lastTwoDigits * ((a/10)%10); // lastTwoDigits * tens
+			
+			lastTwoDigits = ((d1 % 10) + 10 * (d1/10 + d10 % 10)) % 100; 
+		}
+		
+		System.out.println(lastTwoDigits);
+	}
+	public static void main(String[] args) {
+
+		int arr[] = {412, 6, 234234, 22};
+		
+		solve(arr.length, arr);
+	}
+}

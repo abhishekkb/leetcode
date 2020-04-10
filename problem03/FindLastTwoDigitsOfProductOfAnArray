@@ -1,7 +1,7 @@
 
 
 public class FindLastTwoDigitsOfProductOfAnArray {
-	private static void solve(int n, int[] arr) {
+	private static int solve(int n, int[] arr) {
 		if(n==0) {
 			return;
 		}
@@ -13,13 +13,11 @@ public class FindLastTwoDigitsOfProductOfAnArray {
 			
 			lastTwoDigits = ((d1 % 10) + 10 * (d1/10 + d10 % 10)) % 100; 
 		}
-		
-		System.out.println(lastTwoDigits);
+		return lastTwoDigits;
 	}
 	public static void main(String[] args) {
 
 		int arr[] = {913, 108, 5564211, 898};
-		
-		solve(arr.length, arr);
+		System.out.println(solve(arr.length, arr));
 	}
 }

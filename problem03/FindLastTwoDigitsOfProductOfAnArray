@@ -18,7 +18,7 @@ public class FindLastTwoDigitsOfProductOfAnArray {
 	}
 	public static void main(String[] args) {
 
-		int arr[] = {412, 6, 234234, 22};
+		int arr[] = {913, 108, 5564211, 898};
 		
 		solve(arr.length, arr);
 	}
